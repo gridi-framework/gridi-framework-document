@@ -1,0 +1,23 @@
+* {
+    @include box-sizing(border-box);
+    @include backface-visibility(hidden);
+}
+
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $document-background-color;
+    font-family: $document-font-family;
+    font-size: $document-font-size;
+    font-weight: $document-font-weight;
+    line-height: $document-line-height;
+    color: $document-color;
+}
