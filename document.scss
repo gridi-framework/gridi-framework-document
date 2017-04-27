@@ -8,9 +8,17 @@
     @include box-sizing(border-box);
 }
 
+html {
+    font-family: sans-serif;
+    @include text-size-adjust(100%);
+}
+
 body,
 html {
     height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 body {
