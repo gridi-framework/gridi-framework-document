@@ -28,4 +28,13 @@ body {
     font-weight: $document-font-weight;
     line-height: $document-line-height;
     color: $document-color;
+    @if variable-exists(document-font-size-for-screens) {
+        @each $screen-prefix, $sizes in get-screens-map() {
+            @if map-has-key($document-font-size-for-screens, $screen-prefix) {
+                @media(min-width: get-screen-size($screen-prefix, min)) {
+                    max-width: map-get($document-font-size-for-screens, $screen-prefix);
+                }
+            }
+        }
+    }
 }
