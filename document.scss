@@ -32,7 +32,7 @@ body {
         @each $screen-prefix, $sizes in get-screens-map() {
             @if map-has-key($document-font-size-for-screens, $screen-prefix) {
                 @media(min-width: get-screen-size($screen-prefix, min)) {
-                    max-width: map-get($document-font-size-for-screens, $screen-prefix);
+                    font-size: map-get($document-font-size-for-screens, $screen-prefix);
                 }
             }
         }
