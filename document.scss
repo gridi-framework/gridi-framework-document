@@ -4,7 +4,6 @@
 
 * {
     @include box-sizing(border-box);
-    @include backface-visibility(hidden);
 
     &:focus {
         outline: 0;
