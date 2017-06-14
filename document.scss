@@ -29,10 +29,10 @@ html {
 }
 
 body {
-    background-color: $document-background-color;
+    background: $document-background;
     font-family: $document-font-family;
     @include include-document-font-size();
     font-weight: $document-font-weight;
-    line-height: $document-line-height;
+    @include include-document-line-height();
     color: $document-color;
 }
