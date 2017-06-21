@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    background: $document-background;
+    background: $document-background-color;
     font-family: $document-font-family;
     @include include-document-font-size();
     font-weight: $document-font-weight;
