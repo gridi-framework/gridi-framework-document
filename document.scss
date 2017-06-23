@@ -36,3 +36,7 @@ body {
     @include include-document-line-height();
     color: $document-color;
 }
+
+.clearfix {
+    @include clearfix();
+}
