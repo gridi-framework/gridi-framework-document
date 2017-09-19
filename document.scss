@@ -17,6 +17,8 @@
 
 html {
     font-family: sans-serif;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
     @include text-size-adjust(100%);
 }
 
