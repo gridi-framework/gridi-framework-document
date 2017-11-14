@@ -1,0 +1,59 @@
+@-ms-viewport {
+    width: device-width;
+}
+  
+* {
+    @include box-sizing(border-box);
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+*::after,
+*::before {
+    @include box-sizing(border-box);
+}
+
+html {
+    @if $html-height != $body-height {
+        height: $html-height;
+    }
+    font-family: sans-serif;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    @include text-size-adjust(100%);
+    @include html-extra-style();
+}
+
+body,
+html {
+    @if $html-height == $body-height {
+        height: $html-height;
+    }
+    margin: 0;
+    border: 0;
+    padding: 0;
+    @include html-body-extra-style();
+}
+
+body {
+    @if $html-height != $body-height {
+        height: $body-height;
+    }
+    @include background-shorthand((
+        image: $document-background-image,
+        position: $document-background-position,
+        repeat: $document-background-repeat,
+        color: $document-background-color,
+        attachment: $document-background-attachment,
+        make-shorthand: true
+    ));
+    @include document-font();
+    color: $document-color;
+    @include body-extra-style();
+}
+
+.clearfix {
+    @include clearfix();
+}  
