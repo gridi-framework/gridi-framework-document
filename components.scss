@@ -1,18 +1,17 @@
 @-ms-viewport {
     width: device-width;
 }
-  
-* {
-    @include box-sizing(border-box);
 
-    &:focus {
-        outline: 0;
-    }
-}
-
+*,
 *::after,
 *::before {
     @include box-sizing(border-box);
+}
+
+* {
+    &:focus {
+        outline: 0;
+    }
 }
 
 html {
@@ -20,14 +19,17 @@ html {
         height: $html-height;
     }
     font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
+    @include box-sizing(border-box);
     @include text-size-adjust(100%);
     @include html-extra-style();
 }
 
-body,
-html {
+html,
+body {
     @if $html-height == $body-height {
         height: $html-height;
     }
