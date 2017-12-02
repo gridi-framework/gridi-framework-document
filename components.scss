@@ -5,7 +5,7 @@
 *,
 *::after,
 *::before {
-    @include box-sizing(border-box);
+    @include box-sizing($all-elements-box-sizing);
 }
 
 * {
@@ -23,7 +23,7 @@ html {
     line-height: 1.15;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
-    @include box-sizing(border-box);
+    @include box-sizing($html-box-sizing);
     @include text-size-adjust(100%);
     @include html-extra-style();
 }

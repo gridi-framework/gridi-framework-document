@@ -1,4 +1,7 @@
+$all-elements-box-sizing: border-box !default;
+
 $html-height: 100% !default;
+$html-box-sizing: border-box !default;
 $body-height: 100% !default;
 
 @mixin html-extra-style() {}
