@@ -4,6 +4,6 @@ $html-height: 100% !default;
 $html-box-sizing: border-box !default;
 $body-height: 100% !default;
 
-@mixin html-extra-style() {}
-@mixin html-body-extra-style() {}
-@mixin body-extra-style() {}
+//@mixin html-extra-style() {} //Create this mixin before import module when you want add some special style for element
+//@mixin html-body-extra-style() {} //Create this mixin before import module when you want add some special style for element
+//@mixin body-extra-style() {} //Create this mixin before import module when you want add some special style for element

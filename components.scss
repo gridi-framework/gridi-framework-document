@@ -25,7 +25,9 @@ html {
     -webkit-tap-highlight-color: transparent;
     @include box-sizing($html-box-sizing);
     @include text-size-adjust(100%);
-    @include html-extra-style();
+    @if mixin-exists(html-extra-style) {
+        @include html-extra-style();
+    }
 }
 
 html,
@@ -36,7 +38,9 @@ body {
     margin: 0;
     border: 0;
     padding: 0;
-    @include html-body-extra-style();
+    @if mixin-exists(html-body-extra-style) {
+        @include html-body-extra-style();
+    }
 }
 
 body {
@@ -53,7 +57,9 @@ body {
     ));
     @include document-font();
     color: $document-color;
-    @include body-extra-style();
+    @if mixin-exists(body-extra-style) {
+        @include body-extra-style();
+    }
 }
 
 .clearfix {
