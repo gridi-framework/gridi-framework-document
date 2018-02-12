@@ -18,13 +18,19 @@ html {
     @if $html-height != $body-height {
         height: $html-height;
     }
-    font-family: sans-serif;
-    font-size: 100%;
-    line-height: 1.15;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: transparent;
+    @include font-shorthand((
+        style: $html-font-style,
+        variant: $html-font-variant,
+        weight: $html-font-weight,
+        size: $html-font-size,
+        line-height: $html-line-height,
+        family: $html-font-family,
+        make-shorthand: true
+    ));
+    @include not-required-property(-ms-overflow-style, $html-ms-overflow-style);
+    @include not-required-property(-webkit-tap-highlight-color, $html-webkit-tap-highlight-color);
     @include box-sizing($html-box-sizing);
-    @include text-size-adjust(100%);
+    @include text-size-adjust($html-text-size-adjust);
     @if mixin-exists(html-extra-style) {
         @include html-extra-style();
     }

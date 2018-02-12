@@ -2,6 +2,18 @@ $all-elements-box-sizing: border-box !default;
 
 $html-height: 100% !default;
 $html-box-sizing: border-box !default;
+
+$html-font-style: null !default;
+$html-font-variant: null !default;
+$html-font-weight: normal !default;
+$html-font-size: 100% !default;
+$html-line-height: 1.15 !default;
+$html-font-family: sans-serif !default;
+
+$html-ms-overflow-style: scrollbar !default;
+$html-webkit-tap-highlight-color: transparent !default;
+$html-text-size-adjust: 100% !default;
+
 $body-height: 100% !default;
 
 //@mixin html-extra-style() {} //Create this mixin before import module when you want add some special style for element
