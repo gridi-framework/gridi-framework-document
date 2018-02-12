@@ -67,7 +67,3 @@ body {
         @include body-extra-style();
     }
 }
-
-.clearfix {
-    @include clearfix();
-}  
